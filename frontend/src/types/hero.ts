@@ -1,0 +1,37 @@
+export interface Hero {
+  id: string;
+  name: string;
+  nickname: string;
+  date_of_birth: string;
+  universe: string;
+  main_power: string;
+  avatar_url: string;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PaginatedResponse {
+  data: Hero[];
+  total: number;
+  page: number;
+  limit: number;
+}
+
+export interface CreateHeroDto {
+  name: string;
+  nickname: string;
+  date_of_birth?: string;
+  universe?: string;
+  main_power?: string;
+  avatar_url?: string;
+}
+
+export interface UpdateHeroDto {
+  name?: string;
+  nickname?: string;
+  date_of_birth?: string;
+  universe?: string;
+  main_power?: string;
+  avatar_url?: string;
+}
