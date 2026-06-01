@@ -46,4 +46,3 @@ testes unitários e manutenção.
 - Substituir `synchronize: true` por migrations do TypeORM
 - Adicionar autenticação JWT
 - Implementar cache com Redis para a listagem
-- CI/CD com GitHub Actions

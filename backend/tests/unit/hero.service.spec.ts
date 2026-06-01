@@ -21,21 +21,21 @@ describe('HeroService', () => {
     jest.clearAllMocks();
   });
 
-  // ✅ Teste 1 — criação sem campos obrigatórios
+  // Teste 1 — criação sem campos obrigatórios
   it('deve lançar erro ao criar herói sem name', async () => {
     await expect(
       service.create({ nickname: 'Hulk' } as any)
     ).rejects.toThrow('name e nickname são obrigatórios');
   });
 
-  // ✅ Teste 2 — criação sem nickname
+  // Teste 2 — criação sem nickname
   it('deve lançar erro ao criar herói sem nickname', async () => {
     await expect(
       service.create({ name: 'Bruce Banner' } as any)
     ).rejects.toThrow('name e nickname são obrigatórios');
   });
 
-  // ✅ Teste 3 — editar herói inativo
+  // Teste 3 — editar herói inativo
   it('não deve permitir editar herói inativo', async () => {
     (HeroRepository.findOneBy as jest.Mock).mockResolvedValue({
       id: '123',
@@ -49,7 +49,7 @@ describe('HeroService', () => {
     ).rejects.toThrow(AppError);
   });
 
-  // ✅ Teste 4 — herói não encontrado
+  // Teste 4 — herói não encontrado
   it('deve lançar erro ao buscar herói inexistente', async () => {
     (HeroRepository.findOneBy as jest.Mock).mockResolvedValue(null);
 
@@ -58,7 +58,7 @@ describe('HeroService', () => {
     ).rejects.toThrow('Herói não encontrado');
   });
 
-  // ✅ Teste 5 — criação com sucesso
+  // Teste 5 — criação com sucesso
   it('deve criar herói com sucesso', async () => {
     const heroMock = {
       id: 'uuid-123',
