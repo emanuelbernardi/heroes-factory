@@ -7,6 +7,27 @@ Plataforma de gestão de heróis. CRUD completo com paginação, busca, ativaç�
 - **Frontend:** React + TypeScript + Vite + Tailwind CSS + Lucide-React
 - **Database:** MySQL 8.0 (Docker)
 
+## ⚙️ Variáveis de Ambiente
+
+Antes de rodar o projeto, copie o arquivo de exemplo e preencha com suas credenciais:
+
+```bash
+cp .env.example .env
+```
+
+| Variável | Descrição | Exemplo |
+|----------|-----------|---------|
+| `DB_HOST` | Host do banco de dados | `localhost` |
+| `DB_PORT` | Porta do banco | `3306` |
+| `DB_USER` | Usuário do banco | `heroes_user` |
+| `DB_PASS` | Senha do banco | `heroes_pass` |
+| `DB_NAME` | Nome do banco | `heroes_factory` |
+| `MYSQL_ROOT_PASSWORD` | Senha root do MySQL | `root` |
+| `MYSQL_DATABASE` | Nome do banco no Docker | `heroes_factory` |
+| `MYSQL_USER` | Usuário do MySQL no Docker | `heroes_user` |
+| `MYSQL_PASSWORD` | Senha do MySQL no Docker | `heroes_pass` |
+| `PORT` | Porta do backend | `3333` |
+
 ## Como rodar
 
 # 1. Suba o banco
